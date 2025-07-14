@@ -23,10 +23,10 @@ export default function Home() {
           <Services />
         </Box>
         <Box sx={{ mt: 10 }}>
-          <Events />
+          <Donate />
         </Box>
         <Box sx={{ mt: 10 }}>
-          <Donate />
+          <Events />
         </Box>
       </Box>
     </>

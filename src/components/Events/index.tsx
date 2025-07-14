@@ -1,21 +1,53 @@
 import { rocket } from "@/utils/fonts";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
+import EventCard from "./Event-Card";
+import { Events_CARD_DATA } from "@/assets/events";
+import { COLORS } from "@/utils/color";
 
 const Events = () => {
   return (
     <Box>
       <Container maxWidth="lg">
-        <Typography
-          sx={{
-            fontFamily: rocket.style,
-            fontSize: 40,
-            fontWeight: 600,
-            textAlign: "center",
-          }}
+        <Stack
+          direction={"row"}
+          alignItems={"center"}
+          justifyContent={"space-between"}
         >
-          Upcoming Events
-        </Typography>
+          <Typography
+            sx={{
+              fontFamily: rocket.style,
+              fontSize: 40,
+              fontWeight: 600,
+              textAlign: "center",
+            }}
+          >
+            Upcoming Events
+          </Typography>
+          <Button
+            sx={{
+              fontFamily: rocket.style,
+              color: COLORS.PRIMARY,
+              fontSize: 16,
+              textTransform: "capitalize",
+            }}
+          >
+            View All Events
+          </Button>
+        </Stack>
+        <Grid container spacing={3} mt={3}>
+          {Events_CARD_DATA.map((val, i) => (
+            <Grid size={6}>
+              <EventCard
+                title={val.title}
+                description={val.description}
+                eventDetails={val.eventDetails}
+                date={val.date}
+                img={val.img}
+              />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </Box>
   );

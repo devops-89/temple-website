@@ -7,7 +7,7 @@ import { SERVICE_DATA } from "@/assets/service";
 
 const Services = () => {
   return (
-    <Box>
+    <Box sx={{ backgroundColor: "#eeeeee", p: 3 }}>
       <Container maxWidth="lg">
         <Stack
           direction={"row"}
@@ -27,7 +27,7 @@ const Services = () => {
               textTransform: "capitalize",
             }}
           >
-            View All
+            View All Services
           </Button>
         </Stack>
         <Grid container mt={3} spacing={3} alignItems="stretch">
