@@ -4,4 +4,5 @@ export enum COLORS {
   WHITE = "#ffffff",
   TRANSPARENT = "transparent",
   GRAY = "#00000090",
+  Section_color = "#FFEDD5",
 }

@@ -11,6 +11,7 @@ export interface SERVICE_CARD_PROPS {
   title: string;
   description: string;
   price: string;
+  free: Boolean;
 }
 
 export interface EVENTS_CARD_PROPS {
@@ -24,4 +25,10 @@ export interface EVENTS_CARD_PROPS {
 export interface EVENT_DETAILS {
   icon: React.ElementType;
   label: string;
+}
+
+export interface PANDIT_CARD_PROPS {
+  img: StaticImageData;
+  name: string;
+  description?: string;
 }

@@ -15,6 +15,7 @@ export const SERVICE_DATA: SERVICE_CARD_PROPS[] = [
     description:
       "A Hindu marriage is not merely a social contract but a sacred union of  two souls, symbolizing the beginning of the Grihasthashrama (householder stage of life).",
     price: "$501.00",
+    free: false,
   },
   {
     img: service2,
@@ -22,6 +23,7 @@ export const SERVICE_DATA: SERVICE_CARD_PROPS[] = [
     description:
       "This is a Hindu ceremony performed to purify and bless a new home before moving in. It involves various rituals to remove negative energies, invite positive energy, and ensure prosperity. ",
     price: "$251.00",
+    free: false,
   },
   {
     img: service3,
@@ -29,12 +31,30 @@ export const SERVICE_DATA: SERVICE_CARD_PROPS[] = [
     description:
       "The Mundan ceremony is a traditional Hindu ritual involving the first shaving of a child's head, typically performed between the first and third year. It is believed to purify the child by shedding past karma, promote intellectual development, and ensure good health . ",
     price: "$151.00",
+    free: false,
   },
   {
     img: service4,
-    title: "Mundan Ceremony",
+    title: "Pooja Under One Hour",
     description:
-      "This refers to a concise and efficient Hindu worship ceremony designed to be completed within a short timeframe, typically under an hour. It focuses on essential prayers, offerings (like a lit diya, incense, and a few flowers), and devotional practices to connect with the divine, making it suitable for daily worship or when time is limited, without compromising on sincerity. ",
-    price: "$151.00",
+      "This refers to a concise and efficient Hindu worship ceremony designed to be completed within a short timeframe, typically under an hour. It focuses on essential prayers, offerings (like a lit diya, incense, and a few flowers), and devotional practices to connect with the divine. ",
+    price: "$51.00",
+    free: false,
+  },
+  {
+    img: service5,
+    title: "Pooja Over One Hour",
+    description:
+      "A Pooja over one hour refers to more elaborate and extensive Hindu worship ceremonies that typically last longer than an hour, sometimes extending for several hours or even an entire day, depending on their complexity and purpose. ",
+    price: "$101.00",
+    free: false,
+  },
+  {
+    img: service6,
+    title: "funeral service",
+    description:
+      "A funeral service is a ceremonial event held to honor and remember a deceased person, marking their passing and supporting the bereaved. It typically involves rituals, prayers, readings, eulogies, and music, culminating in the final disposition of the body (burial or cremation). ",
+    price: "$0.00",
+    free: true,
   },
 ];

@@ -5,7 +5,10 @@ import logo from "@/logo/logo-dark.png";
 import Image from "next/image";
 import { Header_Data, Social_Icons } from "@/assets/header";
 import { rocket } from "@/utils/fonts";
+import Link from "next/link";
+import { useRouter } from "next/router";
 const Header = () => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -27,12 +30,24 @@ const Header = () => {
           </Box>
           <Stack direction={"row"} alignItems={"center"} spacing={4}>
             {Header_Data.map((val, i) => (
-              <Typography
-                sx={{ fontSize: 18, fontFamily: rocket.style, fontWeight: 500 }}
-                key={i}
-              >
-                {val.label}
-              </Typography>
+              <Link href={val.url} className="link">
+                <Typography
+                  sx={{
+                    fontSize: 18,
+                    fontFamily: rocket.style,
+                    fontWeight: 500,
+                    textDecoration:
+                      val.url === router.pathname ? "underline" : "none",
+                    color:
+                      val.url === router.pathname
+                        ? COLORS.PRIMARY
+                        : COLORS.BLACK,
+                  }}
+                  key={i}
+                >
+                  {val.label}
+                </Typography>
+              </Link>
             ))}
           </Stack>
           <Stack direction={"row"} alignItems={"center"} spacing={2}>

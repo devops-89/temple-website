@@ -10,6 +10,7 @@ const ServiceCard = ({
   title,
   description,
   price,
+  free,
 }: SERVICE_CARD_PROPS) => {
   return (
     <Card
@@ -17,23 +18,55 @@ const ServiceCard = ({
         boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         position: "relative",
         overflow: "hidden",
-        height: 550,
+        height: 600,
         display: "flex",
         flexDirection: "column",
       }}
     >
-      <Image
+      <Box
+        sx={{
+          backgroundImage: `url(${img.src})`,
+          height: 250,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          borderTopLeftRadius: 5,
+          borderTopRightRadius: 5,
+        }}
+      >
+        <Box sx={{ backgroundColor: "#00000040", height: "100%" }}></Box>
+      </Box>
+      {/* <Image
         src={img}
         alt=""
         width={400}
-        height={200}
+        height={250}
         style={{
           objectFit: "cover",
           borderTopLeftRadius: 5,
           borderTopRightRadius: 5,
           transition: "0.5s ease all",
         }}
-      />
+      /> */}
+      {/* {free && (
+        <Box
+          sx={{
+            backgroundColor: "#008000",
+            color: COLORS.WHITE,
+            width: 80,
+            borderRadius: 20,
+            textAlign: "center",
+            p: 0.5,
+            fontSize: 14,
+            fontFamily: rocket.style,
+            position: "absolute",
+            zIndex: 99999,
+            top: 10,
+            right: 10,
+          }}
+        >
+          Free
+        </Box>
+      )} */}
       <CardContent sx={{ flex: 1 }}>
         <Typography
           sx={{
@@ -68,7 +101,7 @@ const ServiceCard = ({
           Price : {price}
         </Typography>
       </CardContent>
-      <Box sx={{ px: 2,mt:"auto" }}>
+      <Box sx={{ px: 2, mt: "auto" }}>
         <Button
           sx={{
             fontFamily: rocket.style,
@@ -80,7 +113,7 @@ const ServiceCard = ({
               backgroundColor: COLORS.TRANSPARENT,
               color: COLORS.PRIMARY,
             },
-            mb:2
+            mb: 2,
           }}
           fullWidth
         >

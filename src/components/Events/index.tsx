@@ -4,8 +4,10 @@ import React from "react";
 import EventCard from "./Event-Card";
 import { Events_CARD_DATA } from "@/assets/events";
 import { COLORS } from "@/utils/color";
+import { useRouter } from "next/router";
 
 const Events = () => {
+  const router = useRouter();
   return (
     <Box>
       <Container maxWidth="lg">
@@ -31,12 +33,13 @@ const Events = () => {
               fontSize: 16,
               textTransform: "capitalize",
             }}
+            onClick={() => router.push("/events")}
           >
             View All Events
           </Button>
         </Stack>
         <Grid container spacing={3} mt={3}>
-          {Events_CARD_DATA.map((val, i) => (
+          {Events_CARD_DATA.slice(0, 2).map((val, i) => (
             <Grid size={6}>
               <EventCard
                 title={val.title}

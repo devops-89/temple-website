@@ -18,7 +18,7 @@ import logo from "@/logo/logo-light.png";
 import Image from "next/image";
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: COLORS.PRIMARY, p: 4, mt: 4 }}>
+    <Box sx={{ backgroundColor: COLORS.PRIMARY, p: 4}}>
       <Container maxWidth="lg">
         <Grid container>
           <Grid size={3}>

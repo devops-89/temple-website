@@ -1,6 +1,7 @@
 import AboutusSection from "@/components/About-us-section";
 import Banner from "@/components/Banner";
 import Donate from "@/components/Donate";
+import DownlaodSection from "@/components/Download-section";
 import Events from "@/components/Events";
 import Services from "@/components/services";
 import { Box } from "@mui/material";
@@ -22,6 +23,9 @@ export default function Home() {
         <Box sx={{ mt: 10 }}>
           <Services />
         </Box>
+        {/* <Box sx={{ mt: 10 }}>
+          <DownlaodSection />
+        </Box> */}
         <Box sx={{ mt: 10 }}>
           <Donate />
         </Box>

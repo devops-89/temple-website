@@ -38,6 +38,7 @@ const Services = () => {
                 description={val.description}
                 price={val.price}
                 title={val.title}
+                free={val.free}
               />
             </Grid>
           ))}
