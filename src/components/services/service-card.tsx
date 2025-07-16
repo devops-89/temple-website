@@ -18,27 +18,20 @@ const ServiceCard = ({
         boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         position: "relative",
         overflow: "hidden",
-        height: 600,
+        height: 650,
         display: "flex",
         flexDirection: "column",
+        ":hover": {
+          ".img": {
+            transform: "scale(1.1)",
+          },
+        },
       }}
     >
-      <Box
-        sx={{
-          backgroundImage: `url(${img.src})`,
-          height: 250,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          borderTopLeftRadius: 5,
-          borderTopRightRadius: 5,
-        }}
-      >
-        <Box sx={{ backgroundColor: "#00000040", height: "100%" }}></Box>
-      </Box>
-      {/* <Image
+      <Image
         src={img}
         alt=""
-        width={400}
+        width={360}
         height={250}
         style={{
           objectFit: "cover",
@@ -46,7 +39,7 @@ const ServiceCard = ({
           borderTopRightRadius: 5,
           transition: "0.5s ease all",
         }}
-      /> */}
+      />
       {/* {free && (
         <Box
           sx={{

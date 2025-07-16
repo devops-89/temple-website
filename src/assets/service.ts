@@ -57,4 +57,28 @@ export const SERVICE_DATA: SERVICE_CARD_PROPS[] = [
     price: "$0.00",
     free: true,
   },
+  {
+    img: service7,
+    title: "kriya karam puja final day",
+    description:
+      "The final day of Kriya Karam Puja, independent of any reference to the Garuda Purana, typically involves rituals centered on bidding a peaceful farewell to the departed soul. It focuses on offerings and prayers for the soul's journey and purification.",
+    price: "$351.00",
+    free: false,
+  },
+  {
+    img: service8,
+    title: "kriya karam in 4 days with garud puran",
+    description:
+      "Kriya Karam over four days, incorporating the Garuda Purana, begins with cremation. Days two and three involve collecting ashes and initial offerings, with the Purana's recitation guiding the soul's journey. The final day concludes with prayers, emphasizing the Purana's role in the soul's peaceful transition.",
+    price: "$501.00",
+    free: false,
+  },
+  {
+    img: service9,
+    title: "kriya karam in 4 days with garud puran",
+    description:
+      "A 10-day Garuda Purana Puja is a comprehensive Hindu ritual for the deceased. It involves daily Pind Daan and continuous recitation of the Garuda Purana, aiming to guide the departed soul through its post-death journey, cleanse sins, and ensure a peaceful transition or liberation.",
+    price: "$501.00",
+    free: false,
+  },
 ];
