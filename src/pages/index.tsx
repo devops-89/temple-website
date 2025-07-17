@@ -4,8 +4,11 @@ import Donate from "@/components/Donate";
 import DownlaodSection from "@/components/Download-section";
 import Events from "@/components/Events";
 import Services from "@/components/services";
-import { Box } from "@mui/material";
+import { rocket } from "@/utils/fonts";
+import { Box, Button, Container, Typography } from "@mui/material";
 import Head from "next/head";
+import preeti_banner from "@/banner/preeti.jpg";
+import { COLORS } from "@/utils/color";
 export default function Home() {
   return (
     <>
@@ -28,6 +31,71 @@ export default function Home() {
         </Box> */}
         <Box sx={{ mt: 10 }}>
           <Donate />
+        </Box>
+        <Box
+          sx={{
+            mt: 10,
+            backgroundImage: `url(${preeti_banner.src})`,
+            width: "100%",
+            height: "80vh",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Container maxWidth="lg">
+            <Typography
+              sx={{
+                fontFamily: rocket.style,
+                fontSize: 40,
+                textAlign: "center",
+                color: COLORS.PRIMARY,
+                fontWeight: 600,
+              }}
+            >
+              Preeti Bhoj Sponsorship
+            </Typography>
+            <Typography
+              sx={{
+                fontFamily: rocket.style,
+                fontSize: 16,
+                textAlign: "center",
+                color: COLORS.WHITE,
+                mt: 1,
+                width: 600,
+                margin: "auto",
+                lineHeight:"30px"
+              }}
+            >
+              Participate in the sacred tradition of Preeti Bhoj and offer meals
+              to devotees, earning immense blessings and contributing to our
+              community.
+            </Typography>
+            <Box sx={{ textAlign: "center" }}>
+              <Button
+                sx={{
+                  fontFamily: rocket.style,
+                  fontSize: 15,
+                  color: COLORS.WHITE,
+                  backgroundColor: COLORS.PRIMARY,
+                  border: `1px solid ${COLORS.PRIMARY}`,
+                  ":hover": {
+                    backgroundColor: COLORS.TRANSPARENT,
+                    color: COLORS.PRIMARY,
+                  },
+                  mt: 2,
+                  width: 200,
+                  textTransform: "capitalize",
+                }}
+              >
+                Sponsor Now
+              </Button>
+            </Box>
+          </Container>
         </Box>
         <Box sx={{ mt: 10 }}>
           <Events />
