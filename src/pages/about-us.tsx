@@ -25,19 +25,19 @@ const AboutUs = () => {
       icon: TaskAltOutlined,
       primary: "Praise & Worship",
       secondary:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
+        "Join us for daily aarti and bhajans, offering prayers and devotion to various Hindu deities in a serene and uplifting atmosphere.",
     },
     {
       icon: TaskAltOutlined,
       primary: "Hindus celebrate",
       secondary:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
+        "We joyfully celebrate important Hindu festivals and special occasions, bringing the community together to preserve and pass on our rich traditions.",
     },
     {
       icon: TaskAltOutlined,
       primary: "Prayers",
       secondary:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec",
+        "Participate in daily and special prayers to seek blessings, peace, and spiritual growth for you and your family.",
     },
   ];
   return (
@@ -59,9 +59,11 @@ const AboutUs = () => {
                 mt: 2,
               }}
             >
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using.
+              Edmonton Mandir is a vibrant spiritual center, dedicated to
+              promoting Hindu culture, traditions, and values. We provide a
+              welcoming space for worship, community gatherings, and cultural
+              celebrations, uniting people of all backgrounds in devotion and
+              harmony.
             </Typography>
             <List>
               {listText.map((val, i) => (

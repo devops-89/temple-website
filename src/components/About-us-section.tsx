@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import aboutimage from "@/banner/about-us.png";
+import aboutimage from "@/banner/about_banner.jpg";
 import { rocket } from "@/utils/fonts";
 import { COLORS } from "@/utils/color";
 import ved1 from "@/icons/ved1.svg";
@@ -12,13 +12,13 @@ const AboutusSection = () => {
       img: ved1,
       heading: "Yajur-Veda",
       description:
-        "But I must explain to you how all this mistaken idea of denouncing pleasure",
+        "The Yajur-Veda is a foundational scripture of Hinduism that serves as a ritual manual for the performance of sacrifices and ceremonies. ",
     },
     {
       img: ved2,
       heading: "Atharva-Veda",
       description:
-        "But I must explain to you how all this mistaken idea of denouncing pleasure",
+        "The Atharva-Veda represents the more diverse, evolving, and practical aspects of the Hindu religious mainstream.",
     },
   ];
   return (
@@ -26,7 +26,13 @@ const AboutusSection = () => {
       <Container maxWidth="lg">
         <Grid container alignItems={"center"}>
           <Grid size={6}>
-            <Image src={aboutimage} alt="" width={450} />
+            <Image
+              src={aboutimage}
+              alt=""
+              width={500}
+              height={500}
+              style={{ objectFit: "cover", borderRadius: "20px" }}
+            />
           </Grid>
           <Grid size={6}>
             <Typography

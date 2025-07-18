@@ -9,7 +9,7 @@ const Services = () => {
     <Box>
       <CustomBanner img={bannerImage.src} label="Services" />
       <Container maxWidth="lg" sx={{ mt: 10 }}>
-        <Grid container spacing={5}>
+        <Grid container spacing={6}>
           {SERVICE_DATA.map((val, i) => (
             <Grid size={4}>
               <ServiceCard

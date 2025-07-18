@@ -56,9 +56,9 @@ const Donate = () => {
                 mt: 2,
               }}
             >
-              Lorem Ipsum has been the industry’s standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              Your support helps us maintain the temple and continue our
+              spiritual and community services. Every contribution makes a
+              difference.
             </Typography>
             <Grid container>
               {donationData.map((val, i) => (

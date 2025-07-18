@@ -5,7 +5,15 @@ import DownlaodSection from "@/components/Download-section";
 import Events from "@/components/Events";
 import Services from "@/components/services";
 import { rocket } from "@/utils/fonts";
-import { Box, Button, Container, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  Container,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Head from "next/head";
 import preeti_banner from "@/banner/preeti.jpg";
 import { COLORS } from "@/utils/color";
@@ -48,7 +56,49 @@ export default function Home() {
           }}
         >
           <Container maxWidth="lg">
-            <Typography
+            <Grid container spacing={4}>
+              <Grid size={6}>
+                <Typography
+                  sx={{
+                    fontSize: 40,
+                    fontFamily: rocket.style,
+                    color: COLORS.WHITE,
+                    fontWeight: 550,
+                  }}
+                >
+                  Sign up for news and up coming event information
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: 16,
+                    fontFamily: rocket.style,
+                    color: COLORS.WHITE,
+                    fontWeight: 500,
+                  }}
+                >
+                  We will provide you with information on upcoming events,
+                  celebrations and news and information on how to sponsor our
+                  events.
+                </Typography>
+              </Grid>
+              <Grid size={6}>
+                <Card sx={{ p: 3, borderRadius: "20px" }}>
+                  <TextField fullWidth label="Full Name*" />
+                  <TextField fullWidth label="Email*" sx={{ mt: 2 }} />
+                  <Button
+                    sx={{
+                      backgroundColor: COLORS.PRIMARY,
+                      mt: 2,
+                      color: COLORS.WHITE,
+                    }}
+                    fullWidth
+                  >
+                    Subscribe
+                  </Button>
+                </Card>
+              </Grid>
+            </Grid>
+            {/* <Typography
               sx={{
                 fontFamily: rocket.style,
                 fontSize: 40,
@@ -94,7 +144,7 @@ export default function Home() {
               >
                 Sponsor Now
               </Button>
-            </Box>
+            </Box> */}
           </Container>
         </Box>
         <Box sx={{ mt: 10 }}>

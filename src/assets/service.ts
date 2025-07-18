@@ -29,7 +29,7 @@ export const SERVICE_DATA: SERVICE_CARD_PROPS[] = [
     img: service3,
     title: "Mundan Ceremony",
     description:
-      "The Mundan ceremony is a traditional Hindu ritual involving the first shaving of a child's head, typically performed between the first and third year. It is believed to purify the child by shedding past karma, promote intellectual development, and ensure good health . ",
+      "The Mundan ceremony is a traditional Hindu ritual involving the first shaving of a child's head, typically performed between the first and third year. It is believed to purify the child by shedding past karma, promote intellectual development.",
     price: "$151.00",
     free: false,
   },
@@ -69,7 +69,7 @@ export const SERVICE_DATA: SERVICE_CARD_PROPS[] = [
     img: service8,
     title: "kriya karam in 4 days with garud puran",
     description:
-      "Kriya Karam over four days, incorporating the Garuda Purana, begins with cremation. Days two and three involve collecting ashes and initial offerings, with the Purana's recitation guiding the soul's journey. The final day concludes with prayers, emphasizing the Purana's role in the soul's peaceful transition.",
+      "Kriya Karam over four days, incorporating the Garuda Purana, begins with cremation. Days two and three involve collecting ashes and initial offerings, with the Purana's recitation guiding the soul's journey. ",
     price: "$501.00",
     free: false,
   },
@@ -77,7 +77,7 @@ export const SERVICE_DATA: SERVICE_CARD_PROPS[] = [
     img: service9,
     title: "kriya karam in 4 days with garud puran",
     description:
-      "A 10-day Garuda Purana Puja is a comprehensive Hindu ritual for the deceased. It involves daily Pind Daan and continuous recitation of the Garuda Purana, aiming to guide the departed soul through its post-death journey, cleanse sins, and ensure a peaceful transition or liberation.",
+      "A 10-day Garuda Purana Puja is a comprehensive Hindu ritual for the deceased. It involves daily Pind Daan and continuous recitation of the Garuda Purana, aiming to guide the departed soul through its post-death journey.",
     price: "$501.00",
     free: false,
   },
