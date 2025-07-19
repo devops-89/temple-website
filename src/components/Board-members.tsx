@@ -1,12 +1,32 @@
 import { board_members } from "@/assets/pandits";
 import { COLORS } from "@/utils/color";
 import { rocket } from "@/utils/fonts";
-import { Avatar, Box, Card, Container, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Card,
+  Container,
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const BoardMembers = () => {
+  const tableHeader = [
+    {
+      label: "Name",
+    },
+    {
+      label: "Position",
+    },
+  ];
   return (
     <Box>
       <Container maxWidth="lg">
@@ -35,7 +55,7 @@ const BoardMembers = () => {
         </Typography>
       </Container>
       <Box sx={{ mt: 5 }}>
-        <Swiper
+        {/* <Swiper
           slidesPerView={5}
           spaceBetween={20}
           style={{ padding: 20 }}
@@ -74,7 +94,97 @@ const BoardMembers = () => {
               </Card>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
+        <Container maxWidth="lg">
+          <Grid container spacing={10}>
+            <Grid size={6}>
+              <Card sx={{ p: 2, width: "100%" }}>
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      {tableHeader.map((val, i) => (
+                        <TableCell>
+                          <Typography
+                            sx={{
+                              fontSize: 16,
+                              fontFamily: rocket.style,
+                              fontWeight: 600,
+                            }}
+                          >
+                            {val.label}
+                          </Typography>
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {board_members.slice(0, 8).map((val, i) => (
+                      <TableRow>
+                        <TableCell>
+                          <Typography
+                            sx={{ fontSize: 14, fontFamily: rocket.style }}
+                          >
+                            {val.name}
+                          </Typography>
+                        </TableCell>
+                        <TableCell>
+                          <Typography
+                            sx={{ fontSize: 14, fontFamily: rocket.style }}
+                          >
+                            {val.designation}
+                          </Typography>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </Card>
+            </Grid>
+            <Grid size={6}>
+              <Card sx={{ p: 2, width: "100%" }}>
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      {tableHeader.map((val, i) => (
+                        <TableCell>
+                          <Typography
+                            sx={{
+                              fontSize: 16,
+                              fontFamily: rocket.style,
+                              fontWeight: 600,
+                            }}
+                          >
+                            {val.label}
+                          </Typography>
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {board_members.slice(8, 16).map((val, i) => (
+                      <TableRow>
+                        <TableCell>
+                          <Typography
+                            sx={{ fontSize: 14, fontFamily: rocket.style }}
+                          >
+                            {val.name}
+                          </Typography>
+                        </TableCell>
+                        <TableCell>
+                          <Typography
+                            sx={{ fontSize: 14, fontFamily: rocket.style }}
+                          >
+                            {val.designation}
+                          </Typography>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </Card>
+            </Grid>
+          </Grid>
+        </Container>
       </Box>
     </Box>
   );

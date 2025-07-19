@@ -1,9 +1,9 @@
 import banner1 from "@/banner/banner1.jpg";
 import banner2 from "@/banner/banner2.jpg";
 import banner3 from "@/banner/banner3.jpg";
-import banner4 from "@/banner/home_banner1.jpg";
-import banner5 from "@/banner/banner5.jpg";
-import banner6 from "@/banner/banner6.jpg";
+import banner4 from "@/banner/new_banner.webp";
+import banner5 from "@/banner/banner.webp";
+import banner6 from "@/banner/banner_new.webp";
 export const bannerData = [
   {
     img: banner4.src,

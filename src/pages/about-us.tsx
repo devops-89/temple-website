@@ -17,6 +17,7 @@ import { TaskAltOutlined } from "@mui/icons-material";
 import aboutUs from "@/banner/about-b-1.png";
 import Image from "next/image";
 import PanditCard from "@/components/Pandit-card";
+import aboutUsReal from "@/banner/about-us-real.jpg";
 import { pandit_data } from "@/assets/pandits";
 import BoardMembers from "@/components/Board-members";
 const AboutUs = () => {
@@ -96,7 +97,13 @@ const AboutUs = () => {
             </List>
           </Grid>
           <Grid size={6} sx={{ textAlign: "end" }}>
-            <Image src={aboutUs} alt="" width={450} />
+            <Image
+              src={aboutUsReal}
+              alt=""
+              width={500}
+              height={500}
+              style={{ objectFit: "cover", borderRadius: 20 }}
+            />
           </Grid>
         </Grid>
       </Container>

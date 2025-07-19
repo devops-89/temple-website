@@ -16,6 +16,11 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
   TextField,
   Typography,
 } from "@mui/material";
@@ -35,6 +40,36 @@ const Contact = () => {
       icon: LocationOnOutlined,
       primary: "Our Location",
       secondary: "9507 39 Ave, Edmonton, AB T6E 5T3",
+    },
+  ];
+
+  const madnirHours = [
+    {
+      day: "Monday - Friday",
+      morningTime: "7:00 AM to 1:00 PM",
+      eveningTime: "4:00 PM to 8:00 PM",
+    },
+    {
+      day: "Saturday",
+      morningTime: "7:00 AM to 2:00 PM",
+      eveningTime: "4:00 PM to 8:00 PM",
+    },
+    {
+      day: "Sunday",
+      morningTime: "7:00 AM to 7:00 PM",
+      eveningTime: "Evening Closed",
+    },
+  ];
+
+  const tableHeader = [
+    {
+      label: "Days",
+    },
+    {
+      label: "Morning Time",
+    },
+    {
+      label: "Evening Time",
     },
   ];
   return (
@@ -61,9 +96,10 @@ const Contact = () => {
                 color: COLORS.GRAY,
               }}
             >
-              Lorem Ipsum has been the industry’s standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              We welcome your questions, feedback, and inquiries. Please use the
+              information below to reach out to Edmonton Mandir. Our team is
+              here to assist you with service timings, event details, community
+              support, or any other requests.
             </Typography>
             <List>
               {list.map((val, i) => (
@@ -177,6 +213,78 @@ const Contact = () => {
             </form>
           </Grid>
         </Grid>
+      </Container>
+      <Container maxWidth="lg">
+        <Box sx={{ mt: 10 }}>
+          <Typography
+            sx={{
+              fontSize: 30,
+              fontWeight: 600,
+              textAlign: "center",
+              textTransform: "capitalize",
+            }}
+          >
+            mandir Hours
+          </Typography>
+          <Table sx={{ mt: 4 }}>
+            <TableHead>
+              <TableRow>
+                {tableHeader.map((val, i) => (
+                  <TableCell>
+                    <Typography
+                      sx={{
+                        fontSize: 14,
+                        fontFamily: rocket.style,
+                        fontWeight: 550,
+                      }}
+                    >
+                      {val.label}
+                    </Typography>
+                  </TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {madnirHours.map((val, i) => (
+                <TableRow>
+                  <TableCell>
+                    <Typography
+                      sx={{
+                        fontSize: 16,
+                        fontFamily: rocket.style,
+                        fontWeight: 400,
+                      }}
+                    >
+                      {val.day}
+                    </Typography>
+                  </TableCell>
+                  <TableCell>
+                    <Typography
+                      sx={{
+                        fontSize: 16,
+                        fontFamily: rocket.style,
+                        fontWeight: 400,
+                      }}
+                    >
+                      {val.morningTime}
+                    </Typography>
+                  </TableCell>
+                  <TableCell>
+                    <Typography
+                      sx={{
+                        fontSize: 16,
+                        fontFamily: rocket.style,
+                        fontWeight: 400,
+                      }}
+                    >
+                      {val.eveningTime}
+                    </Typography>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </Box>
       </Container>
       <Box sx={{ mt: 10 }}>
         <iframe
