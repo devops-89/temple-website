@@ -1,5 +1,5 @@
 import React from "react";
-import aboutBanner from "@/banner/about-us-banner.jpg";
+import aboutBanner from "@/banner/temple.jpg";
 import CustomBanner from "@/components/Custom-Banner";
 import {
   Box,
@@ -10,6 +10,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import { rocket } from "@/utils/fonts";
 import { COLORS } from "@/utils/color";
@@ -41,12 +42,14 @@ const AboutUs = () => {
         "Participate in daily and special prayers to seek blessings, peace, and spiritual growth for you and your family.",
     },
   ];
+
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <div>
       <CustomBanner img={aboutBanner.src} label="About Us" />
       <Container maxWidth="lg" sx={{ mt: 10 }}>
         <Grid container spacing={4}>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{ fontSize: 30, fontFamily: rocket.style, fontWeight: 550 }}
             >
@@ -96,11 +99,11 @@ const AboutUs = () => {
               ))}
             </List>
           </Grid>
-          <Grid size={6} sx={{ textAlign: "end" }}>
+          <Grid size={{ lg: 6, xs: 12 }} sx={{ textAlign: "end" }}>
             <Image
               src={aboutUsReal}
               alt=""
-              width={500}
+              width={phone ? 400 : 500}
               height={500}
               style={{ objectFit: "cover", borderRadius: 20 }}
             />
@@ -132,7 +135,7 @@ const AboutUs = () => {
           </Typography>
           <Grid container sx={{ mt: 3 }} spacing={3}>
             {pandit_data.map((val, i) => (
-              <Grid size={4} key={i}>
+              <Grid size={{lg:4,xs:12}} key={i}>
                 <PanditCard
                   img={val.img}
                   name={val.name}

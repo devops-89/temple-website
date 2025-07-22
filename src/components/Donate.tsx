@@ -8,6 +8,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import React from "react";
 import donation from "@/banner/donate.png";
@@ -37,11 +38,13 @@ const Donate = () => {
       label: "Special Puja",
     },
   ];
+
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <Box>
       <Container maxWidth="lg">
         <Grid container spacing={4} alignItems={"center"}>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{ fontFamily: rocket.style, fontWeight: 600, fontSize: 50 }}
             >
@@ -104,8 +107,8 @@ const Donate = () => {
               Donate
             </Button>
           </Grid>
-          <Grid size={6} textAlign={"center"}>
-            <Image src={donation} alt="" width={500} />
+          <Grid size={{ lg: 6, xs: 12 }} textAlign={"center"}>
+            <Image src={donation} alt="" width={phone ? 400 : 500} />
           </Grid>
         </Grid>
       </Container>

@@ -43,7 +43,7 @@ const BoardMembers = () => {
         <Typography
           sx={{
             mt: 2,
-            width: "50%",
+            width: {lg:"50%",xs:"100%"},
             margin: "auto",
             textAlign: "center",
             fontFamily: rocket.style,
@@ -97,7 +97,7 @@ const BoardMembers = () => {
         </Swiper> */}
         <Container maxWidth="lg">
           <Grid container spacing={10}>
-            <Grid size={6}>
+            <Grid size={{ lg: 6, xs: 12 }}>
               <Card sx={{ p: 2, width: "100%" }}>
                 <Table>
                   <TableHead>
@@ -140,7 +140,7 @@ const BoardMembers = () => {
                 </Table>
               </Card>
             </Grid>
-            <Grid size={6}>
+            <Grid size={{ lg: 6, xs: 12 }}>
               <Card sx={{ p: 2, width: "100%" }}>
                 <Table>
                   <TableHead>

@@ -11,7 +11,7 @@ const Services = () => {
       <Container maxWidth="lg" sx={{ mt: 10 }}>
         <Grid container spacing={6}>
           {SERVICE_DATA.map((val, i) => (
-            <Grid size={4}>
+            <Grid size={{lg:4,xs:12}}>
               <ServiceCard
                 img={val.img}
                 title={val.title}

@@ -1,4 +1,4 @@
-import { Box, Button, Card, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Card, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import events1 from "@/events/nagpanchmi.png";
@@ -23,6 +23,8 @@ const EventCard = ({
   //     label: "Main Temple Hall",
   //   },
   // ];
+
+  const phone=useMediaQuery("(max-width:600px)")
   return (
     <Card
       sx={{
@@ -31,19 +33,14 @@ const EventCard = ({
             color: COLORS.PRIMARY,
           },
         },
-        height: 380,
+        height: { lg: 380, xS: "100%" },
       }}
     >
       <Grid container spacing={2}>
-        <Grid size={6}>
-          <Image
-            src={img}
-            alt="events"
-            width={290}
-            height={380}
-          />
+        <Grid size={{ lg: 6, xs: 12 }}>
+          <Image src={img} alt="events" width={phone ? 400 :290} height={380} />
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ lg: 6, xs: 12 }}>
           <Box sx={{ p: 2 }}>
             <Box
               sx={{

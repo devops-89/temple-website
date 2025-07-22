@@ -26,13 +26,13 @@ const SubFooter = () => {
       >
         <Container maxWidth="lg">
           <Stack
-            direction={"row"}
-            alignItems={"center"}
+            direction={{ lg: "row", xs: "column" }}
+            alignItems={{ lg: "center", xs: "flex-start" }}
             justifyContent={"space-between"}
           >
             <Typography
               sx={{
-                fontSize: 40,
+                fontSize: { lg: 40, xs: 25 },
                 fontFamily: rocket.style,
                 color: COLORS.WHITE,
                 width: "70%",

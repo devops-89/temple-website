@@ -77,7 +77,7 @@ const Contact = () => {
       <CustomBanner img={bannerImage.src} label="Contact Us" />
       <Container maxWidth="lg" sx={{ mt: 10 }}>
         <Grid container spacing={4}>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
                 fontSize: 40,
@@ -131,7 +131,7 @@ const Contact = () => {
               ))}
             </List>
           </Grid>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{
                 fontSize: 40,

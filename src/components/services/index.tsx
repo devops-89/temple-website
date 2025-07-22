@@ -15,7 +15,11 @@ const Services = () => {
           justifyContent={"space-between"}
         >
           <Typography
-            sx={{ fontSize: 35, fontFamily: rocket.style, fontWeight: 600 }}
+            sx={{
+              fontSize: { lg: 35, xs: 25 },
+              fontFamily: rocket.style,
+              fontWeight: 600,
+            }}
           >
             Our Services
           </Typography>
@@ -23,7 +27,7 @@ const Services = () => {
             sx={{
               fontFamily: rocket.style,
               color: COLORS.PRIMARY,
-              fontSize: 16,
+              fontSize: { lg: 16, xs: 14 },
               textTransform: "capitalize",
             }}
           >
@@ -32,7 +36,7 @@ const Services = () => {
         </Stack>
         <Grid container mt={3} spacing={3} alignItems="stretch">
           {SERVICE_DATA.slice(0, 3).map((val, i) => (
-            <Grid size={4} key={i} sx={{ display: "flex" }}>
+            <Grid size={{ lg: 4, xs: 12 }} key={i} sx={{ display: "flex" }}>
               <ServiceCard
                 img={val.img}
                 description={val.description}

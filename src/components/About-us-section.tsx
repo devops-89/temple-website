@@ -1,4 +1,12 @@
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import aboutimage from "@/banner/about_banner.jpg";
@@ -21,20 +29,22 @@ const AboutusSection = () => {
         "The Atharva-Veda represents the more diverse, evolving, and practical aspects of the Hindu religious mainstream.",
     },
   ];
+
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <Box>
       <Container maxWidth="lg">
         <Grid container alignItems={"center"}>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Image
               src={aboutimage}
               alt=""
-              width={500}
+              width={phone ? 400 : 500}
               height={500}
               style={{ objectFit: "cover", borderRadius: "20px" }}
             />
           </Grid>
-          <Grid size={6}>
+          <Grid size={{ lg: 6, xs: 12 }}>
             <Typography
               sx={{ fontSize: 30, fontFamily: rocket.style, fontWeight: 600 }}
             >
@@ -63,7 +73,7 @@ const AboutusSection = () => {
             </Typography>
             <Grid container sx={{ mt: 3 }}>
               {vedas.map((val, i) => (
-                <Grid size={6}>
+                <Grid size={{ lg: 6, xs: 12 }}>
                   <Stack
                     direction={"row"}
                     alignItems={"flex-start"}

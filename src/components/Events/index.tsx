@@ -19,7 +19,7 @@ const Events = () => {
           <Typography
             sx={{
               fontFamily: rocket.style,
-              fontSize: 40,
+              fontSize: { lg: 40, xs: 25 },
               fontWeight: 600,
               textAlign: "center",
             }}
@@ -30,7 +30,7 @@ const Events = () => {
             sx={{
               fontFamily: rocket.style,
               color: COLORS.PRIMARY,
-              fontSize: 16,
+              fontSize: { lg: 16, xs: 14 },
               textTransform: "capitalize",
             }}
             onClick={() => router.push("/events")}
@@ -40,7 +40,7 @@ const Events = () => {
         </Stack>
         <Grid container spacing={3} mt={3}>
           {Events_CARD_DATA.slice(0, 2).map((val, i) => (
-            <Grid size={6}>
+            <Grid size={{ lg: 6, xs: 12 }}>
               <EventCard
                 title={val.title}
                 description={val.description}

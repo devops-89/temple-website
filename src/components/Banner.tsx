@@ -23,7 +23,7 @@ const Banner = () => {
             <Box
               sx={{
                 backgroundImage: `url(${val.img})`,
-                height: "90vh",
+                height: {lg:"90vh",xs:"50vh"},
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -40,14 +40,14 @@ const Banner = () => {
               >
                 <Container maxWidth="lg">
                   <Grid container>
-                    <Grid size={5.5}>
+                    <Grid size={{lg:5.5,xs:12}}>
                       <Typography
                         sx={{
                           color: COLORS.WHITE,
                           fontFamily: rocket.style,
                           fontWeight: 600,
-                          fontSize: 50,
-                          lineHeight: "60px",
+                          fontSize: {lg:50,xs:30},
+                          lineHeight: {lg:"60px",xs:"40px"},
                         }}
                         className="animate__animated animate__backInLeft  "
                       >
@@ -58,9 +58,9 @@ const Banner = () => {
                           color: COLORS.WHITE,
                           fontFamily: rocket.style,
                           fontWeight: 600,
-                          fontSize: 18,
+                          fontSize: {lg:18,xs:16},
                           mt: 2,
-                          lineHeight: "24px",
+                          lineHeight: {lg:"24px",xs:"20px"},
                         }}
                         className="animate__animated animate__backInLeft  "
                       >

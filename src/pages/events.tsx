@@ -11,7 +11,7 @@ const Events = () => {
       <Container maxWidth="lg">
         <Grid container sx={{ mt: 10 }} spacing={4}>
           {Events_CARD_DATA.map((val, i) => (
-            <Grid size={6}>
+            <Grid size={{lg:6,xs:12}}>
               <EventCard
                 img={val.img}
                 date={val.date}
