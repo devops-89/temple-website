@@ -6,6 +6,7 @@ import { rocket } from "@/utils/fonts";
 import { COLORS } from "@/utils/color";
 import { AccessTime, LocationOn, Visibility } from "@mui/icons-material";
 import { EVENTS_CARD_PROPS } from "@/utils/types";
+import AOS from "aos";
 const EventCard = ({
   img,
   eventDetails,
@@ -40,7 +41,7 @@ const EventCard = ({
         <Grid size={{ lg: 6, xs: 12 }}>
           <Image src={img} alt="events" width={phone ? 400 :290} height={380} />
         </Grid>
-        <Grid size={{ lg: 6, xs: 12 }}>
+        <Grid size={{ lg: 6, xs: 12 }} data-aos="fade-right">
           <Box sx={{ p: 2 }}>
             <Box
               sx={{

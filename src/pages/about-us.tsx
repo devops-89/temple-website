@@ -21,6 +21,7 @@ import PanditCard from "@/components/Pandit-card";
 import aboutUsReal from "@/banner/about-us-real.jpg";
 import { pandit_data } from "@/assets/pandits";
 import BoardMembers from "@/components/Board-members";
+import AOS from "aos";
 const AboutUs = () => {
   const listText = [
     {
@@ -49,7 +50,7 @@ const AboutUs = () => {
       <CustomBanner img={aboutBanner.src} label="About Us" />
       <Container maxWidth="lg" sx={{ mt: 10 }}>
         <Grid container spacing={4}>
-          <Grid size={{ lg: 6, xs: 12 }}>
+          <Grid size={{ lg: 6, xs: 12 }} data-aos="fade-right">
             <Typography
               sx={{ fontSize: 30, fontFamily: rocket.style, fontWeight: 550 }}
             >
@@ -99,7 +100,7 @@ const AboutUs = () => {
               ))}
             </List>
           </Grid>
-          <Grid size={{ lg: 6, xs: 12 }} sx={{ textAlign: "end" }}>
+          <Grid size={{ lg: 6, xs: 12 }} sx={{ textAlign: "end" }} data-aos="fade-right">
             <Image
               src={aboutUsReal}
               alt=""
@@ -135,7 +136,7 @@ const AboutUs = () => {
           </Typography>
           <Grid container sx={{ mt: 3 }} spacing={3}>
             {pandit_data.map((val, i) => (
-              <Grid size={{lg:4,xs:12}} key={i}>
+              <Grid size={{lg:4,xs:12}} key={i} data-aos="fade-right">
                 <PanditCard
                   img={val.img}
                   name={val.name}

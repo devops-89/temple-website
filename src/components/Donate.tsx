@@ -19,6 +19,7 @@ import icon1 from "@/icons/fund.svg";
 import icon2 from "@/icons/general-donation.svg";
 import icon3 from "@/icons/renovation.svg";
 import icon4 from "@/icons/special-puja.svg";
+import Aos from "aos";
 const Donate = () => {
   const donationData = [
     {
@@ -39,12 +40,13 @@ const Donate = () => {
     },
   ];
 
+
   const phone = useMediaQuery("(max-width:600px)");
   return (
     <Box>
       <Container maxWidth="lg">
         <Grid container spacing={4} alignItems={"center"}>
-          <Grid size={{ lg: 6, xs: 12 }}>
+          <Grid size={{ lg: 6, xs: 12 }} data-aos="fade-right">
             <Typography
               sx={{ fontFamily: rocket.style, fontWeight: 600, fontSize: 50 }}
             >
@@ -107,7 +109,7 @@ const Donate = () => {
               Donate
             </Button>
           </Grid>
-          <Grid size={{ lg: 6, xs: 12 }} textAlign={"center"}>
+          <Grid size={{ lg: 6, xs: 12 }}  data-aos="fade-right" textAlign={"center"}>
             <Image src={donation} alt="" width={phone ? 400 : 500} />
           </Grid>
         </Grid>

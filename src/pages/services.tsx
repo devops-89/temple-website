@@ -4,6 +4,7 @@ import React from "react";
 import bannerImage from "@/banner/services.jpg";
 import ServiceCard from "@/components/services/service-card";
 import { SERVICE_DATA } from "@/assets/service";
+import AOS from "aos";
 const Services = () => {
   return (
     <Box>
@@ -11,7 +12,7 @@ const Services = () => {
       <Container maxWidth="lg" sx={{ mt: 10 }}>
         <Grid container spacing={6}>
           {SERVICE_DATA.map((val, i) => (
-            <Grid size={{lg:4,xs:12}}>
+            <Grid size={{lg:4,xs:12}} data-aos="fade-right">
               <ServiceCard
                 img={val.img}
                 title={val.title}

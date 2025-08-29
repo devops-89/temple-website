@@ -17,6 +17,7 @@ import {
 import Head from "next/head";
 import preeti_banner from "@/banner/mandir_banner.webp";
 import { COLORS } from "@/utils/color";
+import AOS from "aos";
 export default function Home() {
   return (
     <>
@@ -63,7 +64,7 @@ export default function Home() {
           >
             <Container maxWidth="lg">
               <Grid container spacing={4}>
-                <Grid size={{ lg: 6, xs: 12 }}>
+                <Grid size={{ lg: 6, xs: 12 }} data-aos="fade-right">
                   <Typography
                     sx={{
                       fontSize: { lg: 40, xs: 25 },
@@ -87,7 +88,7 @@ export default function Home() {
                     events.
                   </Typography>
                 </Grid>
-                <Grid size={{ lg: 6, xs: 12 }}>
+                <Grid size={{ lg: 6, xs: 12 }} data-aos="fade-right">
                   <Card sx={{ p: 3, borderRadius: "20px" }}>
                     <TextField fullWidth label="Full Name*" />
                     <TextField fullWidth label="Email*" sx={{ mt: 2 }} />

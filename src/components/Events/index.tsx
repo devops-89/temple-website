@@ -5,7 +5,7 @@ import EventCard from "./Event-Card";
 import { Events_CARD_DATA } from "@/assets/events";
 import { COLORS } from "@/utils/color";
 import { useRouter } from "next/router";
-
+import  AOS from "aos";
 const Events = () => {
   const router = useRouter();
   return (
@@ -40,7 +40,7 @@ const Events = () => {
         </Stack>
         <Grid container spacing={3} mt={3}>
           {Events_CARD_DATA.slice(0, 2).map((val, i) => (
-            <Grid size={{ lg: 6, xs: 12 }}>
+            <Grid size={{ lg: 6, xs: 12 }} data-aos="fade-right">
               <EventCard
                 title={val.title}
                 description={val.description}

@@ -16,6 +16,7 @@ import {
 import React from "react";
 import logo from "@/logo/logo-light.png";
 import Image from "next/image";
+
 const Footer = () => {
   return (
     <Box sx={{ backgroundColor: COLORS.PRIMARY, p: 4 }}>
@@ -226,7 +227,7 @@ const Footer = () => {
 
             <Grid
               size={{ lg: 6, xs: 6 }}
-              sx={{ textAlign: { lg: "end", xs: "start" } }}
+              sx={{ textAlign: { lg: "end", xs: "start" } } }
             >
               <Typography
                 sx={{
