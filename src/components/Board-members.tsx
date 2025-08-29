@@ -95,7 +95,7 @@ const BoardMembers = () => {
         {/* Tables Section */}
         <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
           <Grid container spacing={4} sx={{ maxWidth: "1000px" }}>
-            <Grid item xs={12} lg={6} data-aos="fade-right">
+            <Grid  size={{xs:12,lg:6}} data-aos="fade-right">
             <Paper
               elevation={0}
               sx={{
@@ -198,7 +198,7 @@ const BoardMembers = () => {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} lg={6} data-aos="fade-left">
+          <Grid size={{xs:12,lg:6}} data-aos="fade-left">
             <Paper
               elevation={0}
               sx={{
